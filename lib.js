@@ -103,9 +103,6 @@ let getABName = function (name) {
 
 //获取城市名称
 let getCityShortName = function (name) {
-    if(name.indexOf('陵水') > -1){
-        let a = 0;
-    }
     let cityShortName = name;
     if(['市', '盟'].indexOf(name.substr(name.length-1,1)) > -1){  //末尾包含
         cityShortName = name.substr(0, name.length-1);

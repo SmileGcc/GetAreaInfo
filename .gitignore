@@ -1,0 +1,7 @@
+/node_modules/
+ HEAD
+.DS_Store
+log
+.project
+.idea/
+.vscode/

@@ -12,6 +12,9 @@ let regionMapping = require('./region.mapping');
 let findOrCreateRegion = co.wrap(function* (province, city, provinceId, cityId){
     let regionInfoArr = yield lib.getCityOrRegionInfoAsync(province, city);
     console.log('遍历区数据');
+    if(!regionInfoArr){
+        throw new Error("获取区域数据为空");
+    }
     for(let i=0; i<regionInfoArr.length; i++){
         let obj = regionInfoArr[i];
         let regionName = obj.region;

@@ -106,9 +106,9 @@ let getCityShortName = function (name) {
     let cityShortName = name;
     if(['市', '盟'].indexOf(name.substr(name.length-1,1)) > -1){  //末尾包含
         cityShortName = name.substr(0, name.length-1);
-    }else if ( ['黔西南', '黔东南'].indexOf(name.substr(name.length-3,3)) > -1) {//直接取三两位
+    }else if ( ['黔西南', '黔东南'].indexOf(name.substr(0,3)) > -1) {//直接取三两位
         cityShortName = name.substr(0, 3);
-    } else if ( ['陵水', '保亭', '琼中', '黔南', '海西'].indexOf(name.substr(name.length-2,2)) > -1) {//直接取前两位
+    } else if ( ['陵水', '保亭', '琼中', '黔南', '海西'].indexOf(name.substr(0,2)) > -1) {//直接取前两位
         cityShortName = name.substr(0, 2);
     } else if ( ['自治州', '自治县'].indexOf(name.substr(name.length-3,3)) > -1) { //末尾包含
         name = name.substr(0, name.length-3);
